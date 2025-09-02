@@ -1,0 +1,109 @@
+/* src/styles/PatientOptions.css */
+
+.patient-options-container {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Title */
+.patient-options-title {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #06b6d4, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 15px;
+}
+
+.patient-options-subtitle {
+  font-size: 1.3rem;
+  color: #374151;
+  margin-bottom: 50px;
+  font-weight: 500;
+}
+
+/* Grid Layout */
+.options-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Option Card */
+.option-card {
+  padding: 35px 25px;
+  border-radius: 18px;
+  width: 280px;
+  cursor: pointer;
+  text-align: center;
+  color: white;
+  font-weight: 500;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated Hover Glow */
+.option-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 20%, transparent 60%);
+  transform: rotate(25deg);
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.option-card:hover::before {
+  opacity: 1;
+}
+
+.option-card:hover {
+  transform: translateY(-12px) scale(1.07);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.option-card .icon {
+  font-size: 3.2rem;
+  margin-bottom: 15px;
+}
+
+/* Gradient Themes */
+.gradient-pink {
+  background: linear-gradient(135deg, #ec4899, #db2777);
+}
+
+.gradient-blue {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+}
+
+.gradient-purple {
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+}
+
+.option-card h3 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.option-card p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* Fade Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

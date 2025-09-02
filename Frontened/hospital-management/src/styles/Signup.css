@@ -1,0 +1,99 @@
+.signup-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #2563eb, #1e40af);
+  font-family: Arial, sans-serif;
+}
+
+.signup-card {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 420px;
+}
+
+.signup-title {
+  font-size: 26px;
+  font-weight: bold;
+  color: #2563eb;
+  margin-bottom: 10px;
+}
+
+.signup-subtitle {
+  color: #555;
+  margin: 15px 0;
+}
+
+/* Signup Form */
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: 0.3s;
+}
+
+.input-field:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 5px rgba(37, 99, 235, 0.5);
+}
+
+/* Buttons */
+.signup-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.signup-btn {
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Main Signup Button */
+.full-btn {
+  background: #2563eb;
+  color: white;
+}
+
+.full-btn:hover {
+  background: #1e3a8a;
+}
+
+/* Role Buttons */
+.doctor-btn {
+  background: #2563eb;
+  color: white;
+}
+
+.doctor-btn:hover {
+  background: #1e3a8a;
+}
+
+.patient-btn {
+  background: #e0f2fe;
+  color: #1e3a8a;
+  border: 2px solid #2563eb;
+}
+
+.patient-btn:hover {
+  background: #bfdbfe;
+}

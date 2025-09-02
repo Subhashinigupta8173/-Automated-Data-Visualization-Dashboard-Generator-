@@ -1,0 +1,93 @@
+/* src/styles/MediBot.css */
+
+.medibot-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(120deg, #dbeafe, #f3e8ff, #fef9c3);
+  padding: 20px;
+}
+
+.medibot-card {
+  background: white;
+  border-radius: 20px;
+  padding: 40px 30px;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.medibot-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #06b6d4, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+}
+
+.medibot-subtitle {
+  font-size: 1.2rem;
+  color: #374151;
+  margin-bottom: 25px;
+}
+
+.medibot-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.medibot-textarea {
+  padding: 15px;
+  border-radius: 12px;
+  border: 2px solid #93c5fd;
+  font-size: 1rem;
+  resize: vertical;
+  min-height: 120px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.medibot-textarea:focus {
+  border-color: #2563eb;
+}
+
+.medibot-file {
+  border: 2px dashed #c084fc;
+  padding: 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  background: #faf5ff;
+}
+
+.file-info {
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+.medibot-btn {
+  padding: 14px;
+  background: linear-gradient(90deg, #06b6d4, #3b82f6, #8b5cf6);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.medibot-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(59, 130, 246, 0.5);
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
