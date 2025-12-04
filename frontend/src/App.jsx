@@ -1,3 +1,4 @@
+
 import FileUpload from "./FileUpload";
 import Dashboard from "./Dashboard";
 import { useState } from "react";
@@ -12,6 +13,7 @@ function App() {
       ) : (
         <Dashboard />
       )}
+
     </div>
   );
 }
