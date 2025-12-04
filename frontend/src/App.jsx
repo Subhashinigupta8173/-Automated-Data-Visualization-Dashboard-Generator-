@@ -1,9 +1,19 @@
-import Dashboard from "./pages/Dashboard";
+
+import FileUpload from "./FileUpload";
+import Dashboard from "./Dashboard";
+import { useState } from "react";
 
 function App() {
+  const [uploaded, setUploaded] = useState(false);
+
   return (
     <div>
-      <Dashboard />
+      {!uploaded ? (
+        <FileUpload onUploadSuccess={() => setUploaded(true)} />
+      ) : (
+        <Dashboard />
+      )}
+
     </div>
   );
 }
