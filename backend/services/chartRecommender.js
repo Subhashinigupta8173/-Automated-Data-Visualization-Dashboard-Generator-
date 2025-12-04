@@ -1,4 +1,4 @@
-module.exports = function recommendCharts(types) {
+export default function recommendCharts(types) {
     const charts = [];
 
     Object.entries(types).forEach(([col, type]) => {
@@ -26,4 +26,4 @@ module.exports = function recommendCharts(types) {
     });
 
     return charts;
-};
+}

@@ -1,19 +1,30 @@
-const express = require("express");
-const cors = require("cors");
-const analyzeRoutes = require("./routes/analyzeRoutes");
-const visualizeRoutes = require("./routes/visualizeRoutes");
-import uploadRoutes from "./routes/uploadRoutes.js";
-import visualizeRoutes from "./routes/visualizeRoutes.js";
+import express from "express";
+import dotenv from "dotenv";
+import cors from "cors";
+import connectDB from "./config/db.js";
+import analyzeRoutes from "./routes/analyzeRoutes.js";
+import authRoutes from "./routes/authRoutes.js";
+
+
+dotenv.config();
+connectDB(); 
+
 const app = express();
 app.use(cors());
 app.use(express.json());
 
-
+// Routes
 app.use("/api/analyze", analyzeRoutes);
-app.use("/api/visualize", visualizeRoutes);
+app.use("/api/auth", authRoutes);
 
-app.use("/api/upload", uploadRoutes);
 
-app.listen(5000, () => {
-  console.log("Server running on port 5000");
+app.get("/", (req, res) => {
+  res.send("API Running...");
+});
+
+connectDB(); 
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });

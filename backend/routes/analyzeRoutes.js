@@ -1,7 +1,8 @@
-const express = require("express");
+import express from "express";
+import { analyzeData } from "../controllers/analyzeController.js";
+
 const router = express.Router();
-const analyzeController = require("../controllers/analyzeController");
 
-router.post("/", analyzeController.analyzeData);
+router.post("/", analyzeData);
 
-module.exports = router;
+export default router;

@@ -1,4 +1,4 @@
-module.exports = function validate(data) {
+export default function validate(data) {
     const report = [];
 
     const totalRows = data.length;
