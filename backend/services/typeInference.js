@@ -1,4 +1,4 @@
-const moment = require("moment");
+import moment from "moment";
 
 function detectType(values) {
     let numbers = 0, dates = 0, strings = 0;
@@ -14,7 +14,7 @@ function detectType(values) {
     return "category";
 }
 
-module.exports = function inferTypes(data) {
+export default function inferTypes(data) {
     const columns = Object.keys(data[0]);
     const result = {};
 
@@ -24,4 +24,4 @@ module.exports = function inferTypes(data) {
     });
 
     return result;
-};
+}
