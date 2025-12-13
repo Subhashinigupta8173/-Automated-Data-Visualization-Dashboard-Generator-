@@ -1,4 +1,4 @@
-Subhashini Gupta(Leader),Kuldeep Garg, Sohm Kundu, Anshu Kumari, Krishna
+Subhashini Gupta(Leader),Kuldeep Garg, Soham Kundu, Anshu Kumari, Krishna
 
 📊 Automated Data Visualization & Dashboard Generator
 Upload → Analyze → Visualize — Instantly
